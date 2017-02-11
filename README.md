@@ -25,7 +25,8 @@ Preferably the same tools are used inside the company as well.
 * Each session begins with review of homework from previous session;
 * Classes will explain the theory from the preparation section with examples
 and focus on writing programs to solidify the knowledge;
-* All unfinished homework must be complete before the next session.
+* Next session will not start until all pending homework tasks are complete!
+* If necessary sessions will be repeated!
 
 Useful links:
 
