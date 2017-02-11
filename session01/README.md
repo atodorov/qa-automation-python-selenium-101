@@ -1,6 +1,8 @@
 # Session 01: Structure of a Python program
 
-Preparation: read chapter 02 from Dive into Python!
+## Preparation
+
+* Read chapter 02 from Dive into Python!
 
 ## Program structure
 
