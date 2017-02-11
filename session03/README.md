@@ -66,7 +66,7 @@ are quite handy when writing tests. All tasks below require the usage of both.
 ### Vowels in a string
 
 * Implement a function, called `count_vowels(str)`, which returns the count of all vowels in the string `str`.
-**Count uppercase vowels aswell!** The English vowels are `aeiouy`.
+**Count uppercase vowels as well!** The English vowels are `aeiouy`.
 * Signature
 
         def count_vowels(str):
@@ -78,6 +78,7 @@ are quite handy when writing tests. All tasks below require the usage of both.
 * Implement a function, called `count_consonants(str)`, which returns the count of all consonants in the string `str`.
 **Count uppercase consonants as well!** The English consonants are `bcdfghjklmnpqrstvwxz`.
 * Signature
+
         def count_consonants(str):
             pass
 
@@ -99,8 +100,10 @@ are quite handy when writing tests. All tasks below require the usage of both.
 * Implement a function `fact_digits(n)`, that takes an integer and returns the sum of the factorials of each digit of `n`.
 * For example, if n = 145, we want 1! + 4! + 5!
 * Signature
+
         def fact_digits(n):
             pass
+
 * Hint - use the functions that you have defined previously. What other functions
 do you need ?
 
@@ -122,11 +125,14 @@ For example, if `n = 3`, the result is `112`.
         def fib_number(n):
             pass
 
+* Hint - use the functions that you have defined previously. What other functions
+do you need?
+
 ### Palindrome
 
 * Implement a function, called `palindrome(obj)`,
-which takes an object (could be anything) and checks if it is a string representation is a palindrome.
-For example, the integer `121` and the string `"kapak"` are palindromes. The function should work with both..
+which takes a number or a string and checks if it is a representation is a palindrome.
+For example, the integer `121` and the string `"kapak"` are palindromes. The function should work with both.
 * Hint - check Python's [str()](https://docs.python.org/3/library/stdtypes.html#str) function
 * Signature
 
