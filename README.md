@@ -32,3 +32,4 @@ Useful links:
 * [Dive into Python](http://www.diveintopython.net/)
 
 ## Session 01: Structure of a Python program
+## Session 02: Data types and structures
