@@ -33,3 +33,4 @@ Useful links:
 
 ## Session 01: Structure of a Python program
 ## Session 02: Data types and structures
+## Session 03: If statements and loops

@@ -1,30 +1,31 @@
-# Session 02: Data types and data structures
+# Session 03: If statements and loops
 
 ## Preparation
 
-* Read chapter 03 from Dive into Python;
-* Read chapter [Built-in types](https://docs.python.org/3/library/stdtypes.html)
-from Python's documentation.
+* Read sections 8.1, 8.2 and 8.3 from chapter 8
+[Compound statements](https://docs.python.org/3/reference/compound_stmts.html)
+from Python's documentation to learn the syntax and semantics of `if`, `while`
+and `for` statements.
 
-## Main data types
+## Control flow
 
-In Python these are `int`, `float`, `boolean`, `str`, `list`, `dict`, `tuple` and `set`!
-Operators for these types are defined in the documentation and will be used in the
-tasks below. We will explain them as we go along!
+In Python `if` and `while` statements are used to control program flow by
+examining boolean conditions. Comparison operators are described in
+[6.10 Comparisons](https://docs.python.org/3/reference/expressions.html#comparisons),
+boolean operations are described in 
+[6.11 Boolean operations](https://docs.python.org/3/reference/expressions.html#boolean-operations).
+
+The `for` statement is used to iterate over sequences. The basic sequence types are
+`list` and `str` as well as `tuple`.
+
+If statements and for loops are the backbone of most Python programs and
+are quite handy when writing tests. All tasks below require the usage of both.
 
 
 
 ## Tasks & homework
 
-* Implement all solutions into a file named `solutions.py`
-
-### A + B
-
-* Implement a function which adds two integers together
-* Signature
-
-        def sum(a, b):
-            pass
+* Implement all solutions into a file named `solution.py`
 
 ### Sum of all digits of a number
 
