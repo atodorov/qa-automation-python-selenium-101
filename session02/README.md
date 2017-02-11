@@ -1,4 +1,4 @@
-# Session 01: Data types and data structures
+# Session 02: Data types and data structures
 
 ## Preparation
 
@@ -16,11 +16,12 @@ tasks below. We will explain them as we go along!
 
 ## Tasks & homework
 
-* Defined all solutions into a file named `solutions.py`
+* Implement all solutions into a file named `solutions.py`
 
 ### A + B
 
-* Defined a function which adds two integers together
+* Implement a function which adds two integers together
+* Signature
 
         def sum(a, b):
             pass
