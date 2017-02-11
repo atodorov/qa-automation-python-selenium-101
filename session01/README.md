@@ -80,8 +80,8 @@ In the terminal type:
 * Define a variable named `employee` with a value of `Ivan`
 * Define a function with the following signature:
 
-    def helloFrom():
-        pass
+        def helloFrom():
+            pass
 
 * Document what this function does
 * Extend the function to accept only one parameter
