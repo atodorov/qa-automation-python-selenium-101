@@ -1,3 +1,4 @@
+import copy
 import unittest
 from solution import *
 
@@ -101,10 +102,11 @@ class TestSolution(unittest.TestCase):
 
 
     def test_add_fibonacci(self):
-        self.assertEqual(FIBONACCI_NUMBERS, [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144])
-        self.assertEqual(add_fibonacci(FIBONACCI_NUMBERS)[-1], 233)
-        self.assertEqual(add_fibonacci(FIBONACCI_NUMBERS)[-1], 377)
-        self.assertEqual(add_fibonacci(FIBONACCI_NUMBERS)[-1], 610)
+        NUMBERS = copy.deepcopy(FIBONACCI_NUMBERS)
+        self.assertEqual(NUMBERS, [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144])
+        self.assertEqual(add_fibonacci(NUMBERS)[-1], 233)
+        self.assertEqual(add_fibonacci(NUMBERS)[-1], 377)
+        self.assertEqual(add_fibonacci(NUMBERS)[-1], 610)
 
     def test_fib_exists(self):
         self.assertFalse(fib_exists(FIBONACCI_NUMBERS, 0))
