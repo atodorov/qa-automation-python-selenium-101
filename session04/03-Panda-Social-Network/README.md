@@ -43,8 +43,9 @@ Returns `False` if the panda is not a member of the network.
 If they are friends, the level is 1. Otherwise, count the number of friends you need to go through from panda1 in order to get to panda2.
 If they are not connected at all, return -1! Return `False` if one of the pandas are not member of the network.
 * `are_connected(panda1, panda2)` - return `True` if the pandas are connected somehow, between friends, or `False` otherwise.
-* `how_many_gender_in_network(level, panda, gender)` - returns the number of gender pandas (male of female) that in the panda
-network in that many levels deep. If level == 2, we will have to look in all friends of panda and all of their friends too. And count
+* `how_many_gender_in_network(level, panda, gender)` - returns the number of pandas with `gender` (male of female) that
+are in the network of `panda`, while counting `level` levels deep.
+If level == 2, we will have to look in all friends of `panda` and all of their friends too...
 
 An example
 
