@@ -12,7 +12,6 @@ Our `BankAccount` will have the following methods:
 * `withdraw(amount)` - takes `amount` money from the account. Returns `True` if it was successful. Otherwise, `False`
 * `__str__` should print: `"Bank account for {name} with balance of {amount}{currency}"`
 * `__int__` should return the balance of the `BankAccount`
-* `transfer_to(account, amount)` - transfers `amount` to `account` if they both have the same currencies! Returns `True` if successful.
 * `history()` - returns a list of strings, that represent the history of the bank account. Check examples below for more information.
 
 
@@ -34,16 +33,24 @@ True
 >>> account.balance()
 500
 >>> account.history()
-['Account was created', 'Deposited 1000$', 'Balance check -> 1000$', '__int__ check -> 1000$', '500$ was withdrawed', 'Balance check -> 500$']
+['Account was created', 'Deposited 1000$', 'Balance check -> 1000$', '__int__ check -> 1000$', '500$ was withdrawn', 'Balance check -> 500$']
 >>> account.withdraw(1000)
 False
 >>> account.balance()
 500
 >>> account.history()
-['Account was created', 'Deposited 1000$', 'Balance check -> 1000$', '__int__ check -> 1000$', '500$ was withdrawed', 'Balance check -> 500$', 'Withdraw for 1000$ failed.', 'Balance check -> 500$']
+['Account was created', 'Deposited 1000$', 'Balance check -> 1000$', '__int__ check -> 1000$', '500$ was withdrawn', 'Balance check -> 500$', 'Withdraw for 1000$ failed.', 'Balance check -> 500$']
 ```
 
+## Extra usage
+
+**NOTE:** for this portion of the task there are no tests to validate the
+correct operation!!! In the next session we will learn about unit tests and
+revisit this!
+
 Also, we should be able to transfer money from one account to another:
+
+* `transfer_to(account, amount)` - transfers `amount` to `account` if they both have the same currencies! Returns `True` if successful.
 
 ```python
 >>> rado = BankAccount("Rado", 1000, "BGN")
