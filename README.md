@@ -31,6 +31,8 @@ and focus on writing programs to solidify the knowledge;
 Useful links:
 
 * [Dive into Python](http://www.diveintopython.net/)
+* [The Python Tutorial](https://docs.python.org/3/tutorial/index.html)
+* [Official Python documentation](https://docs.python.org/)
 
 ## Session 01: Structure of a Python program
 ## Session 02: Data types and structures

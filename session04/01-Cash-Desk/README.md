@@ -43,7 +43,7 @@ a == c # True
 
 money_holder = {}
 
-money_holder[a] = 1 # We have one 10% bill
+money_holder[a] = 1 # We have one 10$ bill
 
 if c in money_holder:
     money_holder[c] += 1

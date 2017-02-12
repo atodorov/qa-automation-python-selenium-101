@@ -18,6 +18,14 @@ class TestBill(unittest.TestCase):
         self.assertNotEqual(self.bill, bill2)
         self.assertEqual(self.bill, bill3)
 
+    def test_type_of_amount(self):
+        with self.assertRaises(TypeError):
+            Bill("10")
+
+    def test_value_of_amount(self):
+        with self.assertRaises(ValueError):
+            Bill(-5)
+
 
 class TestBatchBill(unittest.TestCase):
     def setUp(self):
@@ -39,14 +47,6 @@ class TestCashDesk(unittest.TestCase):
         self.batch = BatchBill([Bill(5), Bill(10), Bill(15)])
         self.desk = CashDesk()
 
-    def test_type_of_amount(self):
-        with self.assertRaises(TypeError):
-            Bill("10")
-
-    def test_value_of_amount(self):
-        with self.assertRaises(ValueError):
-            Bill(-5)
-
     def test_take_money_from_bill(self):
         self.desk.take_money(self.bill)
         self.assertEqual(self.desk.total(), 10)
@@ -65,11 +65,11 @@ class TestCashDesk(unittest.TestCase):
         self.desk.take_money(self.bill)
         self.desk.take_money(self.batch)
 
-        expected ="We have a total of 40$ in the desk\n\
-We have the following count of bills, sorted in ascending order:\n\
-5$ bills - 1\n\
-10$ bills - 2\n\
-15$ bills - 1"
+        expected = """We have a total of 40$ in the desk
+We have the following count of bills, sorted in ascending order:
+5$ bills - 1
+10$ bills - 2
+15$ bills - 1"""
 
         self.assertEqual(self.desk.inspect(), expected)
 
