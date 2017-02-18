@@ -1,15 +1,14 @@
-# Python training for Myriad Development
+# QA automation with Python & Selenium 101
 
 ## Module 00 - Environment setup
 
 Students need to prepare the following environment on their computers:
 
-* Install Python on Windows from https://www.python.org/downloads/windows/;
- * TODO: which version: 2.7, 3.5 or 3.6 ?
+* Install Python on your computer from https://www.python.org/downloads/windows/;
 * Text editor of choice, preferably [PyCharm IDE](https://www.jetbrains.com/pycharm/);
 * Install & configure source control system of choice (or git).
 
-**NOTES:** 
+**NOTES:**
 
 * Students should be prepared before the first Module since the
 training does not intend to focus on installation related issues.
@@ -33,9 +32,15 @@ Useful links:
 * [Dive into Python](http://www.diveintopython.net/)
 * [The Python Tutorial](https://docs.python.org/3/tutorial/index.html)
 * [Official Python documentation](https://docs.python.org/)
+* [Unofficial Selenium Python documentation](http://selenium-python.readthedocs.io/)
+* [Official Selenium API documentation for Python](https://seleniumhq.github.io/selenium/docs/api/py/api.html)
+
 
 ## Module 01: Structure of a Python program
 ## Module 02: Data types and structures
 ## Module 03: If statements and loops
 ## Module 04: Classes and objects
 ## Module 05: Unit testing
+## Module 06: Selenium with Python
+## Module 07: Page Objects design pattern
+## Module 08: Writing automated tests for real scenarios
