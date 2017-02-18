@@ -1,4 +1,4 @@
-# Session 03: If statements and loops
+# Module 03: If statements and loops
 
 ## Preparation
 

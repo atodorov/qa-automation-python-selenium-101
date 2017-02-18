@@ -1,4 +1,4 @@
-# Session 01: Structure of a Python program
+# Module 01: Structure of a Python program
 
 ## Preparation
 

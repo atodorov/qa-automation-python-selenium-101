@@ -1,4 +1,4 @@
-# Object Oriented Programming
+# Module 04: Object Oriented Programming
 
 ## Preparation
 

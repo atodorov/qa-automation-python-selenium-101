@@ -1,4 +1,4 @@
-# Unit teesting in Python
+# Module 05: Unit teesting in Python
 
 ## Preparation
 
@@ -19,7 +19,7 @@ The standard documentation contains the
 
 ## Tasks & homework
 
-* Return to Session 04 and re-examine the Bank Account task.
+* Return to Module 04 and re-examine the Bank Account task.
 Define test scenarios for the `transfer_to()` method and implement
 them using unit tests.
 * Examine the existing test suite in details. What other tests can be

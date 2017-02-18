@@ -1,4 +1,4 @@
-# Session 02: Data types and data structures
+# Module 02: Data types and data structures
 
 ## Preparation
 
