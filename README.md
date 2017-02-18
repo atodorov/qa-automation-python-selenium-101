@@ -44,3 +44,7 @@ Useful links:
 ## Module 06: Selenium with Python
 ## Module 07: Page Objects design pattern
 ## Module 08: Writing automated tests for real scenarios
+
+
+All materials here are licensed under CC-BY-SA license, see
+https://creativecommons.org/licenses/by-sa/4.0/ for more information.
