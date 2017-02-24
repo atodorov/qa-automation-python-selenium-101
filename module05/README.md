@@ -22,5 +22,5 @@ The standard documentation contains the
 * Return to Module 04 and re-examine the Bank Account task.
 Define test scenarios for the `transfer_to()` method and implement
 them using unit tests.
-* Examine the existing test suite in details. What other tests can be
+* Examine the existing test suite (for all previous tasks) in details. What other tests can be
 written ? Write them!

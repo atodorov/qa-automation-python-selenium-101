@@ -73,9 +73,9 @@ Read the
    [Chapter 7.3 Alerts](http://selenium-python.readthedocs.io/api.html#module-selenium.webdriver.common.alert)
 
 
-    simpleAlert = driver.switch_to_alert()
-    alertText = simpleAlert.text
-    simpleAlert.accept()
+        simpleAlert = driver.switch_to_alert()
+        alertText = simpleAlert.text
+        simpleAlert.accept()
 
 
 7. Ending test session/execution:
