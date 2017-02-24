@@ -49,7 +49,7 @@ Everything after a `#` (hash sign) is a comment and is ignored by the Python int
 Shared functionality is defined inside a Python module. A module may be:
 
 - a `file_name.py` or
-_ a directory with an `__init__.py` file inside
+- a directory with an `__init__.py` file inside
 
 Modules are loaded and used into the program via:
 
@@ -68,6 +68,20 @@ All modules from the Python standard library are documented at https://docs.pyth
 The module search path is defined in the `sys.path` variable! This is a list of
 directories in which modules are searched (from first to last). It can also be used
 to alter the search path to include non-standard directories!
+
+## Starting the Python interpreter
+
+An interactive session (useful for trying out things) can be started from the
+terminal by typing:
+
+    $ python
+    Python 2.7.5 (default, Aug  2 2016, 04:20:16)
+    [GCC 4.8.5 20150623 (Red Hat 4.8.5-4)] on linux2
+    Type "help", "copyright", "credits" or "license" for more information.
+    >>> print "Hello"
+    Hello
+    >>>
+
 
 ## Starting Python programs
 
