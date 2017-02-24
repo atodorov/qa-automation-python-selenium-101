@@ -46,7 +46,7 @@ igredients and returns a new dictionary
         1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144
 
 * Implement a function `add_fibonacci(lst)` which extends the list of numbers with
-the next one
+the next Fibonacci number
 * Implement a function `fib_exists(lst, n)` which returns boolean. The function checks
 if the number `n` exists in the Fibonacci sequence `lst`
 * Implement a function `which_fib(lst, n)` which returns integer. This is the index
