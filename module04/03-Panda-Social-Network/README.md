@@ -1,4 +1,4 @@
-We are going to make a social networks for Pandas
+We are going to make a social network for Pandas
 
 This is the next big thing. We promise!
 
@@ -39,13 +39,27 @@ If `panda1` or `panda2` are not members of the network, add them!
 * `are_friends(panda1, panda2)` - returns `True` if the pandas are friends. Otherwise, `False`
 * `friends_of(panda)` - returns a list of `Panda` with the friends of the given panda.
 Returns `False` if the panda is not a member of the network.
+
+# Extra homework
+
 * `connection_level(panda1, panda2)` - returns the connection level between `panda1` and `panda2`.
-If they are friends, the level is 1. Otherwise, count the number of friends you need to go through from panda1 in order to get to panda2.
-If they are not connected at all, return -1! Return `False` if one of the pandas are not member of the network.
+   If they are friends, the level is 1. Otherwise, count the number of friends you need to go
+  through from `panda1` in order to get to `panda2`.
+  If they are not connected at all, return -1!
+  Return `False` if one of the pandas are not member of the network.
 * `are_connected(panda1, panda2)` - return `True` if the pandas are connected somehow, between friends, or `False` otherwise.
 * `how_many_gender_in_network(level, panda, gender)` - returns the number of pandas with `gender` (male of female) that
-are in the network of `panda`, while counting `level` levels deep.
-If level == 2, we will have to look in all friends of `panda` and all of their friends too...
+  are in the network of `panda`, while counting `level` levels deep.
+  If level == 2, we will have to look in all friends of `panda` and all of their friends too...
+
+**NOTE 1:** the above 3 methods are recursive! For more info on recursions see:
+http://www.python-course.eu/recursive_functions.php
+
+**NOTE 2:** each recursive function can be rewriten in iterative way. Which one is easier and
+more readable/simple depends on the particular problem domain. 
+
+**NOTE 3:** during testing we don't need to use recursion. If we do then maybe we're
+doing something wrong!
 
 An example
 

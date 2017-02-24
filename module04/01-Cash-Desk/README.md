@@ -23,7 +23,8 @@ The class should implement:
 * If amount is negative number, raise an `ValueError` error.
 * If type of amount isn't `int`, raise an `TypeError` error.
 * **HINT:** raising exceptions is done with `raise ExceptionType("message")`
-
+* See this SO thread about the difference between `__str__` and `__repr__`
+http://stackoverflow.com/questions/1436703/difference-between-str-and-repr-in-python
 
 Here is an example usage:
 

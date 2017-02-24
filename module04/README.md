@@ -299,7 +299,7 @@ class Panda:
         return "nomnom nom"
 
 
-class PandaCareTake():
+class PandaCareTaker():
 
     .....
 

@@ -6,11 +6,13 @@
 
 Our `BankAccount` will have the following methods:
 
-* Constructor takes a `name` for the account, initial `balance` and a `currency`. If `balance` is negative number, raise an `ValueError` error.
-* `deposit(amount)` - deposits money of `amount` to your balance. If `amount` is negative number, raise an `ValueError` error.
+* Constructor takes a `name` for the account, initial `balance` and a `currency`.
+  If `balance` is negative number, raise a `ValueError` error.
+* `deposit(amount)` - deposits money of `amount` to your balance.
+  If `amount` is negative number, raise a `ValueError` error.
 * `balance()` - returns the current balance
 * `withdraw(amount)` - takes `amount` money from the account. Returns `True` if it was successful. Otherwise, `False`
-* `__str__` should print: `"Bank account for {name} with balance of {amount}{currency}"`
+* `__str__` should return: `"Bank account for {name} with balance of {amount}{currency}"`
 * `__int__` should return the balance of the `BankAccount`
 * `history()` - returns a list of strings, that represent the history of the bank account. Check examples below for more information.
 
