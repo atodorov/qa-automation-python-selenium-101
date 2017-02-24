@@ -11,21 +11,22 @@ Students need to prepare the following environment on their computers:
 **NOTES:**
 
 * Students should be prepared before the first Module since the
-training does not intend to focus on installation related issues.
+  training does not intend to focus on installation related issues!
 * Students must be familiar with their tools of choice, e.g. they need to know
-how to use the IDE or text editor, how to search files, how to search for
-particular text, etc.
+  how to use the IDE or text editor, how to search files, how to search for
+  particular text, etc;
 * Instructor may be using different text editor and operating system and may not be
-able to help with matters related to any particular tool if they are not obvious
-enough!
-* Students are advised to use the same tools so they can help each other.
-Preferably the same tools are used inside the company as well.
+  able to help with matters related to any particular tool if they are not obvious
+  enough;
+* Students are advised to use the same tools so they can help each other;
+  Preferably the same tools are used inside the company as well;
 * Student must read all preparation materials before class begins;
 * Each Module begins with review of homework from previous Module;
 * Classes will explain the theory from the preparation section with examples
-and focus on writing programs to solidify the knowledge;
-* Next Module will not start until all pending homework tasks are complete!
-* If necessary Modules will be repeated in multiple lessons!
+  and focus on writing programs to solidify the knowledge;
+* Each module is scheduled to take 1 week (total of 3 hrs) of onsite training;
+* All homework needs to be done by COB Friday so that Instructor can review and
+  provide feedback on it!
 
 Useful links:
 
@@ -44,7 +45,6 @@ Useful links:
 ## Module 06: Selenium with Python
 ## Module 07: Page Objects design pattern
 ## Module 08: Writing automated tests for real scenarios
-
 
 All materials here are licensed under CC-BY-SA license, see
 https://creativecommons.org/licenses/by-sa/4.0/ for more information.
