@@ -1,4 +1,4 @@
-# Module 05: Unit teesting in Python
+# Module 05: Unit testing in Python
 
 ## Preparation
 
