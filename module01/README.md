@@ -104,3 +104,9 @@ In the terminal type:
 * Define a function body which returns the string `Hello from <value_of_the_parameter>`
 
 **TIP:** Use `test.py` to validate your solution is correct.
+
+## Bonus task
+
+* Define a function `print_doc(something)` which prints
+  the doc-string of `something`!
+
