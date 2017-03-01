@@ -108,5 +108,8 @@ In the terminal type:
 ## Bonus task
 
 * Define a function `print_doc(something)` which prints
-  the doc-string of `something`!
+  the doc-string of `something`! **NOTE:** tests require the `mock` module which is
+  part of Python 3. On Python 2 it is available from https://pypi.python.org/pypi/mock.
+  One option is to extract the archive and place the `mock/` directory under the `module01`
+  directory so tht Python can find it!
 
