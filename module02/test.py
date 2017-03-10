@@ -4,9 +4,15 @@ from solution import *
 
 class TestSolution(unittest.TestCase):
     def test_num_add(self):
-        self.assertEqual(num_add(1, 2), 3)
+        int_result = num_add(1, 2)
+        # validate type of result b/c Python will consider 3 and 3.0 equal!
+        self.assertTrue(isinstance(int_result, int))
+        self.assertEqual(int_result, 3)
         self.assertEqual(num_add(2, 1), 3)
-        self.assertEqual(num_add(1.5, 2.5), 4.0)
+
+        float_result = num_add(1.5, 2.5)
+        self.assertTrue(isinstance(float_result, float))
+        self.assertEqual(float_result, 4.0)
 
     def test_num_sub(self):
         self.assertEqual(num_sub(1, 2), -1)
@@ -50,6 +56,16 @@ class TestSolution(unittest.TestCase):
         self.assertFalse(ingredient_exists('FLOUR', PANCAKE_INGREDIENTS))
         self.assertTrue(ingredient_exists('salt', PANCAKE_INGREDIENTS))
         self.assertFalse(ingredient_exists('sugar', PANCAKE_INGREDIENTS))
+
+        # test that the global PANCAKE_INGREDIENTS variable is not used
+        # but rather the parameter of this function is used inside its body!
+        coffee_recipe = {
+            'sugar': 1,
+            'water': 200,
+            'coffee': 1,
+            'heat': True
+        }
+        self.assertTrue(ingredient_exists('sugar', coffee_recipe))
 
     def test_fatten_pancakes(self):
         fat_ingredients = fatten_pancakes(PANCAKE_INGREDIENTS)
@@ -100,7 +116,6 @@ class TestSolution(unittest.TestCase):
     def test_fibonacci_numbers(self):
         self.assertEqual(FIBONACCI_NUMBERS, [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144])
 
-
     def test_add_fibonacci(self):
         NUMBERS = copy.deepcopy(FIBONACCI_NUMBERS)
         self.assertEqual(NUMBERS, [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144])
@@ -119,8 +134,6 @@ class TestSolution(unittest.TestCase):
 
         with self.assertRaises(ValueError):
             which_fib(FIBONACCI_NUMBERS, 99999)
-
-
 
 
 if __name__ == '__main__':
