@@ -60,6 +60,12 @@ class TestSolution(unittest.TestCase):
         # validate that print was called with the doc-string of solution.helloFrom
         self.assertEqual(_stdout.getvalue().strip(), solution.helloFrom.__doc__.strip())
 
+        # execute the method under test
+        solution.print_doc(solution.print_doc)
+
+        # validate that print was called with the doc-string of solution.helloFrom
+        self.assertTrue(_stdout.getvalue().strip().find(solution.print_doc.__doc__.strip()) > -1)
+
 if __name__ == '__main__':
     unittest.main()
 
