@@ -53,7 +53,7 @@ class TestSolution(unittest.TestCase):
 
     def test_ingredient_exists(self):
         self.assertTrue(ingredient_exists('flour', PANCAKE_INGREDIENTS))
-        self.assertFalse(ingredient_exists('FLOUR', PANCAKE_INGREDIENTS))
+        self.assertEqual(ingredient_exists('FLOUR', PANCAKE_INGREDIENTS), False)
         self.assertTrue(ingredient_exists('salt', PANCAKE_INGREDIENTS))
         self.assertFalse(ingredient_exists('sugar', PANCAKE_INGREDIENTS))
 
@@ -124,7 +124,7 @@ class TestSolution(unittest.TestCase):
         self.assertEqual(add_fibonacci(NUMBERS)[-1], 610)
 
     def test_fib_exists(self):
-        self.assertFalse(fib_exists(FIBONACCI_NUMBERS, 0))
+        self.assertEqual(fib_exists(FIBONACCI_NUMBERS, 0), False)
         self.assertTrue(fib_exists(FIBONACCI_NUMBERS, 1))
         self.assertTrue(fib_exists(FIBONACCI_NUMBERS, 144))
 
