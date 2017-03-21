@@ -21,13 +21,11 @@ class TestBill(unittest.TestCase):
 
     def test_type_of_amount(self):
         with self.assertRaises(TypeError):
-            b = Bill("10")
-            self.assertEqual(b.ammount, 0)
+            Bill("10")
 
     def test_value_of_amount(self):
         with self.assertRaises(ValueError):
-            b = Bill(-5)
-            self.assertEqual(b.ammount, 0)
+            Bill(-5)
 
 
 class TestBatchBill(unittest.TestCase):
