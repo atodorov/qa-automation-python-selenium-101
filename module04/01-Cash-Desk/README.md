@@ -98,7 +98,7 @@ Finally, implement a `CashDesk` class, which has the following methods:
 
 * `take_money(money)`, where `money` can be either `Bill` or `BatchBill` class
 * `total()` - returns the total amount of money currenly in the desk
-* `inspect()` - prints a table representation of the money - for each bill, how many copies of it we have.
+* `inspect()` - returns a table representation of the money - for each bill, how many copies of it we have.
 
 For example:
 

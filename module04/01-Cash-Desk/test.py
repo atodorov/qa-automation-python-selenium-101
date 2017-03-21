@@ -16,15 +16,18 @@ class TestBill(unittest.TestCase):
         bill2 = Bill(10)
         bill3 = Bill(5)
         self.assertNotEqual(self.bill, bill2)
+        self.assertEqual(False, self.bill == bill2)
         self.assertEqual(self.bill, bill3)
 
     def test_type_of_amount(self):
         with self.assertRaises(TypeError):
-            Bill("10")
+            b = Bill("10")
+            self.assertEqual(b.ammount, 0)
 
     def test_value_of_amount(self):
         with self.assertRaises(ValueError):
-            Bill(-5)
+            b = Bill(-5)
+            self.assertEqual(b.ammount, 0)
 
 
 class TestBatchBill(unittest.TestCase):
