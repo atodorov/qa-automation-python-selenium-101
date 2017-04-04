@@ -5,6 +5,17 @@
 Read the
 [Unofficial Selenium Python documentation](http://selenium-python.readthedocs.io/);
 
+## Installation
+
+1. Download the .tar.gz archive from https://pypi.python.org/pypi/selenium and
+   extract the `selenium/` directory into the current directory (or anywhere on the
+   Python module search path)
+2. Download geckodriver from https://github.com/mozilla/geckodriver/releases and
+   extract the `geckodriver.exe` under the Windows search path. If Selenium is not
+   able to find `geckodriver.exe` automatically then use:
+
+        driver = webdriver.Firefox(executable_path = 'C:\<path to>\geckodriver.exe')
+
 ## Selenium WebDriver basics
 
 1. Driver initialization
@@ -25,9 +36,14 @@ Read the
 
 4. Actions:
 
+        from selenium.webdriver.common.keys import Keys
         element.send_keys("some text")
         element.send_keys(" and then some more", Keys.RETURN)
         anyElement.click()
+        
+        # hover element
+        from selenium.webdriver.common.action_chains import ActionChains
+        ActionChains(driver).move_to_element(element).perform()
 
 5. Waits, see [Chapter 5. Waits](http://selenium-python.readthedocs.io/waits.html):
 
@@ -67,6 +83,11 @@ Read the
                 )
             finally:
                 driver.quit()
+
+    - How to get Selenium to wait for page load after a click
+
+        See this
+        [blog post](http://www.obeythetestinggoat.com/how-to-get-selenium-to-wait-for-page-load-after-a-click.html).
 
 
 6. Handling alerts, see
