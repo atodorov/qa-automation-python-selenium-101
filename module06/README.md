@@ -117,6 +117,23 @@ Read the
     methods which come from your unit testing framework of choice. Possibly couple that with iterating
     over the selected element to inspect its children, etc!
 
+10. Taking Screenshots
+
+        driver.save_screenshot('screenshot.png')
+        
+        import codecs
+        codecs.open('my-page.html', "w", "utf-8").write(driver.page_source)
+
+11. Handling iframes
+
+    See http://selenium-python.readthedocs.io/navigating.html#moving-between-windows-and-frames
+
+        driver.switch_to_frame("frameName")
+        driver.switch_to_frame("frameName.0.child")
+        driver.switch_to_default_content()
+
+    For non-Python examples see http://toolsqa.com/selenium-webdriver/handling-iframes-using-selenium-webdriver/
+
 
 ## Tasks
 
