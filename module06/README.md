@@ -44,6 +44,10 @@ Read the
         # hover element
         from selenium.webdriver.common.action_chains import ActionChains
         ActionChains(driver).move_to_element(element).perform()
+        
+        # get element values
+        print element.text
+        print element.get_attribute('attr_name')
 
 5. Waits, see [Chapter 5. Waits](http://selenium-python.readthedocs.io/waits.html):
 
