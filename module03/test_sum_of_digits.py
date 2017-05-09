@@ -8,5 +8,12 @@ class FirstDayTests(unittest.TestCase):
         self.assertEqual(sum_of_digits(6), 6)
         self.assertEqual(sum_of_digits(-10), 1)
 
+    def test_check_string(self):
+        self.assertRaises(RuntimeError, sum_of_digits, "Pesho")
+        # which is the same as
+        with self.assertRaises(RuntimeError):
+            sum_of_digits("Pesho")
+
+
 if __name__ == '__main__':
     unittest.main()
