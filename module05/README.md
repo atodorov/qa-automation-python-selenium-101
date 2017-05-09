@@ -23,10 +23,29 @@ methods are:
 The standard documentation contains the
 [list of assert methods](https://docs.python.org/3/library/unittest.html#assert-methods)!
 
+You can write asserts using several different styles:
+
+    assert 4 == 4
+    self.assertEqual(4, 4)
+    self.assertTrue(4 == 4)
+    self.assertTrue(-1)
+
+    assert 4 < 5
+    self.assertTrue(4 < 5)
+
+
 ## Demonstration of setUp/tearDown and test execution
 
 Execute `test.py` to see the order of execution of all set-up/tear-down and test methods!
 
+
+## Flaky tests
+
+These are tests which randomly fail without an obvious reason. The root cause behind them
+is either timing issues (async JavaScript in a web context) or mismatch between the actual
+environment the test is running into (DB records, files on disk, etc) and the environment
+the tester imagined when the test was created! Execute `test.py` several times quickly
+to trigger a flaky failure.
 
 ## Tasks & homework
 

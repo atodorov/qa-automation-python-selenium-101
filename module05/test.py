@@ -29,5 +29,17 @@ class ExampleTestCase(unittest.TestCase):
         print "        This is the last test. It will PASS"
         assert True
 
+
+class FlakyTest(unittest.TestCase):
+    '''
+        Execute this several times quickly to make it fail!
+    '''
+    def do_fail(self):
+        if datetime.now().second % 3 == 0:
+            raise Exception('I am a flaky test')
+
+    def test_myself(self):
+        self.do_fail()
+
 if __name__ == "__main__":
     unittest.main()
