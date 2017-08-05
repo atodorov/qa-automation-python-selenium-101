@@ -1,70 +1,27 @@
-import sys
 import solution
 import unittest
 
-try:
-    # works on Python 2.7
-    import mock
-except ImportError:
-    # works on Python 3
-    from unittest import mock
-
-try:
-    # works on Python 2.7
-    from StringIO import StringIO
-except ImportError:
-    # works on Python 3
-    from io import StringIO
-
 class TestSolution(unittest.TestCase):
-    def test_employee(self):
-        self.assertEqual(solution.employee, 'Ivan')
+    def test_f_c(self):
+        self.assertTrue(solution.f_c.__doc__)
 
-    def test_helloFrom_docstring_exists(self):
-        self.assertTrue(solution.helloFrom.__doc__)
+        for i in range(-10, 10):
+            self.assertEqual(4, solution.f_c(i))
 
-    def test_helloFrom_without_parameters(self):
-        with self.assertRaises(TypeError):
-            solution.helloFrom()
+    def test_f_x(self):
+        for x in range(-10, 10):
+            for a in range(-10, 10):
+                for b in range(-10, 10):
+                    self.assertEqual(a*x + b, solution.f_x(x, a, b))
 
-    def test_helloFrom_with_two_parameters(self):
-        with self.assertRaises(TypeError):
-            solution.helloFrom('Ivan', 'Alex')
+    def test_sum(self):
+        for x in range(-10, 10):
+            expected = 0
+            for i in range(1, 4):
+                expected += solution.f_x(x, i, i)
 
-    def test_helloFrom_with_Ivan(self):
-        self.assertEqual(solution.helloFrom('Ivan'), 'Hello from Ivan')
-        self.assertEqual(solution.helloFrom('Alex'), 'Hello from Alex')
+            self.assertEqual(expected, solution.sum(x))
 
-    @mock.patch.object(solution, 'print', create=True)
-    def test_print_doc_on_python3(self, _print):
-        if sys.version_info.major < 3:
-            return
-
-        # execute the method under test
-        solution.print_doc(solution.helloFrom)
-
-        # validate that print was called only once
-        self.assertEqual(_print.call_count, 1)
-
-        # validate that print was called with the doc-string of solution.helloFrom
-        _print.assert_called_with(solution.helloFrom.__doc__)
-
-    @mock.patch('sys.stdout', new_callable=StringIO)
-    def test_print_doc_on_python2(self, _stdout):
-        if sys.version_info.major > 2:
-            return
-
-        # execute the method under test
-        solution.print_doc(solution.helloFrom)
-
-        # validate that print was called with the doc-string of solution.helloFrom
-        self.assertEqual(_stdout.getvalue().strip(), solution.helloFrom.__doc__.strip())
-
-        # execute the method under test
-        solution.print_doc(solution.print_doc)
-
-        # validate that print was called with the doc-string of solution.helloFrom
-        self.assertTrue(_stdout.getvalue().strip().find(solution.print_doc.__doc__.strip()) > -1)
 
 if __name__ == '__main__':
     unittest.main()

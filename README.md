@@ -4,7 +4,7 @@
 
 Students need to prepare the following environment on their computers:
 
-* Install Python on your computer from https://www.python.org/downloads/windows/;
+* Install Python 3 on your computer from https://www.python.org/downloads/;
 * Text editor of choice, preferably [PyCharm IDE](https://www.jetbrains.com/pycharm/);
 * Install & configure source control system of choice (or git).
 
