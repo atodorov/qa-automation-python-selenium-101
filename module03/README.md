@@ -149,4 +149,4 @@ where each key is a character from `string` and its value is the number of occur
             pass
 
 
-**TIP:** Use the `test_*.py` files to validate your solution is correct.
+**TIP:** Use `test.py` to validate your solution is correct.
