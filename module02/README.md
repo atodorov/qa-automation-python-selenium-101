@@ -8,10 +8,29 @@ from Python's documentation.
 
 ## Main data types
 
-In Python these are `int`, `float`, `boolean`, `str`, `list`, `dict`, `tuple` and `set`!
-Operators for these types are defined in the documentation and will be used in the
-tasks below. We will explain them as we go along!
+Data types represent values with common properties. For example `int` represents all
+integer numbers. You can perform comparison and mathematical operations on `int` numbers.
+`str` is the type representing text values.
 
+In Python the main data types are `int`, `float`, `boolean`, `str`, `list`, `dict`,
+`tuple` and `set`! Operators for these types are defined in the documentation and will
+be used in the tasks below. We will explain them as we go along!
+
+
+## DateTime types
+
+Python has special types for working with dates and times. They live in the
+[datetime module](https://docs.python.org/3/library/datetime.html).
+
+    >>> from datetime import datetime, timedelta
+    >>> datetime.now()
+    datetime.datetime(2017, 8, 5, 23, 43, 50, 500589)
+    >>> datetime.now().isoformat()
+    '2017-08-05T23:44:02.508418'
+    >>> datetime.now().year
+    2017
+    >>> datetime.now() - timedelta(days=7)
+    datetime.datetime(2017, 7, 29, 23, 44, 33, 101454)
 
 
 ## Tasks & homework
@@ -46,7 +65,7 @@ igredients and returns a new dictionary
         1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144
 
 * Implement a function `add_fibonacci(lst)` which extends the list of numbers with
-the next Fibonacci number
+the next [Fibonacci number](https://en.wikipedia.org/wiki/Fibonacci_number)
 * Implement a function `fib_exists(lst, n)` which returns boolean. The function checks
 if the number `n` exists in the Fibonacci sequence `lst`
 * Implement a function `which_fib(lst, n)` which returns integer. This is the index
