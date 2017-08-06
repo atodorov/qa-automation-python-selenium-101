@@ -15,9 +15,9 @@ Students need to prepare the following environment on their computers:
   and focus on writing programs to solidify the knowledge;
 * Each module is scheduled to take 1 hour;
 * You have 3 lives for the entire workshop. If you don't complete
-  the tasks for the given module you lose 1 life. One all your lives
-  are lost you need to go home!
-* The first 5 students that complete on time and without errors (all tests PASS)
+  the tasks for the given module you lose 1 life. When all of your 3 lives are lost
+  it is **GAME OVER**!
+* The first 5 students that complete assinments on time and without errors (all tests PASS)
   will receive rewards for each module!
 
 
