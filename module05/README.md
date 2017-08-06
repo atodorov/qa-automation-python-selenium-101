@@ -36,7 +36,7 @@ You can write asserts using several different styles:
 
 ## Demonstration of setUp/tearDown and test execution
 
-Execute `test.py` to see the order of execution of all set-up/tear-down and test methods!
+Execute `test_example.py` to see the order of execution of all set-up/tear-down and test methods!
 
 
 ## Flaky tests
@@ -44,7 +44,7 @@ Execute `test.py` to see the order of execution of all set-up/tear-down and test
 These are tests which randomly fail without an obvious reason. The root cause behind them
 is either timing issues (async JavaScript in a web context) or mismatch between the actual
 environment the test is running into (DB records, files on disk, etc) and the environment
-the tester imagined when the test was created! Execute `test.py` several times quickly
+the tester imagined when the test was created! Execute `test_example.py` several times quickly
 to trigger a flaky failure.
 
 ## Object oriented principles for testers
@@ -106,8 +106,13 @@ More general information about OOP can be found in [module04](../module04) of th
 
 ## Tasks & homework
 
-* Return to Module 04 and re-examine the Bank Account task.
-Define test scenarios for the `transfer_to()` method and implement
-them using unit tests.
+* Examine the `calculator.py` program and
+  * write tests for all of its functions. Use the
+    `test_calculator.py::CalculatorTestCase::test_<function_name>` naming scheme for your
+    test methods!
+  * Modify `calculator.py` to avoid executing the interactive commands when testing
+  * **TIP**: use `test.py` to verify that your tests are correct!
+
+
 * Examine the existing test suite (for all previous tasks) in details. What other tests can be
 written ? Write them!

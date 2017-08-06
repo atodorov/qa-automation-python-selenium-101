@@ -1,46 +1,81 @@
+import sys
 import unittest
-from datetime import datetime
+import unittest.mock
+from io import StringIO
 
-class ExampleTestCase(unittest.TestCase):
-    @classmethod
-    def setUpClass(cls):
-        print "setUpClass executes only once. CREATE DATABASE;"
-        print
+import test_calculator
 
+class TestCalculatorTestCase(unittest.TestCase):
     def setUp(self):
-        print "    setUp executes before every test method!"
+        """
+            Will fail if the test_calculator module doesn't have a
+            CalculatorTestCase class defined!
+        """
+        self.test_case_class = test_calculator.CalculatorTestCase
+        self.calculator_functions = ['add', 'subtract', 'multiply', 'divide']
 
-    def tearDown(self):
-        print "    tearDown executes after every test method!"
+    def test_attributes_exist(self):
+        """
+            Validate that all test methods for the calculator.py program
+            follow the naming convention test_<function_name>
+        """
+        for attr in self.calculator_functions:
+            self.assertTrue(hasattr(self.test_case_class, 'test_%s' % attr))
 
-    @classmethod
-    def tearDownClass(cls):
-        print
-        print "tearDownClass executes only once. DROP DATABASE;"
+    def test_calculator_tests_must_pass(self):
+        """
+            Validate that when executed the test cases for the calculator
+            will actually PASS. We do this by executing them.
+        """
+        suite = unittest.TestSuite()
+        for attr in self.calculator_functions:
+            suite.addTest(self.test_case_class('test_%s' % attr))
 
-    def test_first_method(self):
-        print "        This is the first test. It will PASS"
-        assert True
+        result = unittest.TestResult()
 
-    def test_second_method(self):
-        print "        This is the second test. It will FAIL"
-        assert False
+        suite.run(result)
+        self.assertTrue(result.wasSuccessful())
 
-    def test_zzzzz(self):
-        print "        This is the last test. It will PASS"
-        assert True
+    def test_calculator_tests_call_expected_calculator_functions(self):
+        """
+            Validate that calculator tests will actually execute
+            the expected functions from the calculator module. We do this
+            by mocking the functions, executing the test methods and
+            verifying that the test method actually called the mocked
+            function!
+        """
+        for attr in self.calculator_functions:
+            with unittest.mock.patch('test_calculator.calculator.%s' % attr) as calc_func:
+                t = self.test_case_class('test_%s' % attr)
+                result = t.run()
 
+                # NOTE: we should get an error like this
+                # AssertionError: 5 != <MagicMock name='add()'>
+                # when executing the calculator test methods
+                self.assertFalse(result.wasSuccessful())
 
-class FlakyTest(unittest.TestCase):
-    '''
-        Execute this several times quickly to make it fail!
-    '''
-    def do_fail(self):
-        if datetime.now().second % 3 == 0:
-            raise Exception('I am a flaky test')
+                # however we make sure that all functions in the calculator module
+                # have actually been called
+                self.assertTrue(calc_func.called)
 
-    def test_myself(self):
-        self.do_fail()
+    def test_calculator_interactive_not_executed_when_imported(self):
+        """
+            Verify that the interactive commands are not executed when
+            the calculator module is imported. We do this by mocking
+            the input function to deal away with interactiveness in the test
+            and mocking sys.stdout to assert that nothing was printed!
+        """
+        if 'calculator' in sys.modules:
+            # force import of the calculator module
+            # b/c already imported from test_calculator
+            del sys.modules['calculator']
+
+        with unittest.mock.patch('sys.stdout', new_callable=StringIO) as _stdout, \
+             unittest.mock.patch('builtins.input', return_value=1) as _input:
+            import calculator
+            # print was never called
+            self.assertEqual('', _stdout.getvalue().strip())
+
 
 if __name__ == "__main__":
     unittest.main()
