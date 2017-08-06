@@ -11,8 +11,8 @@ Read the
    extract the `selenium/` directory into the current directory (or anywhere on the
    Python module search path)
 2. Download geckodriver from https://github.com/mozilla/geckodriver/releases and
-   extract the `geckodriver.exe` under the Windows search path. If Selenium is not
-   able to find `geckodriver.exe` automatically then use:
+   extract `geckodriver` or `geckodriver.exe` under search path. If Selenium is not
+   able to find `geckodriver` automatically then use:
 
         driver = webdriver.Firefox(executable_path = 'C:\<path to>\geckodriver.exe')
 
@@ -116,7 +116,7 @@ Read the
 9. Asserts
 
     **NOTE:** most Selenium bindings, including these for Python don't have handy asserts to verify
-    existence of elements, number of element children or particular properties. You will have to
+    existence of elements, number of children elements or particular properties. You will have to
     locate the required elements and use the base `assert <boolean condition>` statement or assert
     methods which come from your unit testing framework of choice. Possibly couple that with iterating
     over the selected element to inspect its children, etc!
@@ -141,13 +141,17 @@ Read the
 
 ## Tasks
 
-Crate test scripts, based on `unittest.TestCase` which automate the following scenarios:
+Selenium is a generic browser automation engine. That means it can be used not
+only during testing but also in regular programs. Create a program called
+`solution.py` which
 
-* Go to python.org and verify that the latest download versions for Windows are 3.6.0 and 2.7.13
-* Go to python.org and
-    - initiate a search for the string "tutorial" using the search form
-    - verify that the first link in Results points to https://www.python.org/doc/newstyle and
-    - it's title text is "New-style Classes"
-* Go to python.org and
-    - initiate a search for the string "ala-bala-nica" using the search form
-    - verify that the results list is empty
+* Navigates to the [BBC Weather page for Sofia](http://www.bbc.com/weather/727011)
+* implements a function `get_weather(driver, days)` which returns the weather conditions for
+  a given number of days. `driver` is a Selenium driver object and `days` is the number of days
+  for which to return results.
+* The return type is a list containing tuples of type (str, int).
+  The first element in the tuple is the human readable name of the weather, e.g. *Sunny*,
+  *Thundery Shower*, etc and the second element is the maximum temperature
+* If `days` is not a valid value then return None
+
+Use `test.py` to validate your solution is correct.
