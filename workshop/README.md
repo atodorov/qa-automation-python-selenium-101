@@ -17,7 +17,7 @@ Students need to prepare the following environment on their computers:
 * You have 3 lives for the entire workshop. If you don't complete
   the tasks for the given module you lose 1 life. When all of your 3 lives are lost
   it is **GAME OVER**!
-* The first 5 students that complete assinments on time and without errors (all tests PASS)
+* The first 5 students that complete assignments on time and without errors (all tests PASS)
   will receive rewards for each module!
 
 
