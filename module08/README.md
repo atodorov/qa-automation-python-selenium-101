@@ -18,6 +18,9 @@ to describe your scenarios.
 - Sites that can be used for testing:
   - http://shop.pragmatic.bg
   - https://mozillians.org
+- Open source projects which could use your help
+  - [Kiwi TCMS](http://kiwitcms.org) - provides docker compose to run the
+    application. Needs lots of Selenium based tests!
 
 
 ## Tasks
