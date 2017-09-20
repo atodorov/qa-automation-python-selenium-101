@@ -6,6 +6,7 @@ Students need to prepare the following environment on their computers:
 
 * Install Python 3 on your computer from https://www.python.org/downloads/;
 * Text editor of choice, preferably [PyCharm IDE](https://www.jetbrains.com/pycharm/);
+* Selenium & geckodriver, see [Selenium installation](../module06/#installation)
 
 ## Rules of engagement
 
