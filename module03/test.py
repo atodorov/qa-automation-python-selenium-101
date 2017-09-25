@@ -60,12 +60,12 @@ class SolutionTests(unittest.TestCase):
     def test_palindrome(self):
         self.assertTrue(palindrome(121))
         self.assertTrue(palindrome("kapak"))
-        self.assertEquals(palindrome("baba"), False)
+        self.assertEqual(palindrome("baba"), False)
 
     def test_prime_number(self):
-        self.assertEquals(False, prime_number(9))
+        self.assertEqual(False, prime_number(9))
         self.assertTrue(prime_number(7))
-        self.assertEquals(False, prime_number(8))
+        self.assertEqual(False, prime_number(8))
 
     def test_sum_all_digits_of_a_number(self):
         self.assertEqual(sum_of_digits(1325132435356), 43)

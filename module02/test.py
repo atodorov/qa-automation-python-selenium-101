@@ -25,8 +25,8 @@ class TestSolution(unittest.TestCase):
         self.assertEqual(num_mul(2.5, 4), 10.0)
 
     def test_num_div(self):
-        self.assertEqual(num_div(3, 2), 1)
-        self.assertEqual(num_div(2, 3), 0)
+        self.assertEqual(num_div(3, 2), 1.5)
+        self.assertEqual(num_div(2, 3), 0.6666666666666666)
         self.assertEqual(num_div(3.0, 2), 1.5)
 
     def test_num_floor(self):
