@@ -67,8 +67,10 @@ class TestSocialNetwork(unittest.TestCase):
         rado = Panda("Rado", "rado@pandamail.com", "male")
         pavli = Panda("Pavli", "pavlin@pandamail.com", "male")
         maria = Panda("maria", "maria@pandamail.com", "female")
+        gogo = Panda("Gogo", "gogo@pandamail.com", "male")
 
         self.network.make_friends(self.ivo, rado)
+        self.network.make_friends(pavli, gogo)
         self.network.make_friends(rado, pavli)
         self.network.make_friends(pavli, maria)
 
