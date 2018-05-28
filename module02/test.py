@@ -40,7 +40,9 @@ class TestSolution(unittest.TestCase):
 
     def test_boolean_constants(self):
         self.assertTrue(IS_TRUE)
+        self.assertTrue(isinstance(IS_TRUE, bool))
         self.assertFalse(IS_FALSE)
+        self.assertTrue(isinstance(IS_FALSE, bool))
 
     def test_pancake_ingredients(self):
         for key in PANCAKE_INGREDIENTS.keys():
