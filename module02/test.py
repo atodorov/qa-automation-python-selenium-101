@@ -70,10 +70,13 @@ class TestSolution(unittest.TestCase):
         self.assertTrue(ingredient_exists('sugar', coffee_recipe))
 
     def test_fatten_pancakes(self):
-        fat_ingredients = fatten_pancakes(PANCAKE_INGREDIENTS)
+        TEST_INGREDIENTS = PANCAKE_INGREDIENTS.copy()
+        TEST_INGREDIENTS['canary'] = 404
 
-        for key in fat_ingredients.keys():
-            self.assertTrue(key in ['flour', 'eggs', 'milk', 'butter', 'salt'])
+        fat_ingredients = fatten_pancakes(TEST_INGREDIENTS)
+
+        # test that result is a new dictionary
+        self.assertNotEqual(id(fat_ingredients), id(TEST_INGREDIENTS))
 
         self.assertEqual(fat_ingredients['flour'], 2)
         self.assertEqual(fat_ingredients['eggs'], 6)
@@ -81,11 +84,20 @@ class TestSolution(unittest.TestCase):
         self.assertTrue(fat_ingredients['butter'])
         self.assertEqual(fat_ingredients['salt'], 0.001)
 
+        # test that the input parameter was used
+        self.assertEqual(fat_ingredients['canary'], 404)
+
         # test that PANCAKE_INGREDIENTS didn't change
         self.test_pancake_ingredients()
 
     def test_add_sugar(self):
-        with_sugar = add_sugar(PANCAKE_INGREDIENTS)
+        TEST_INGREDIENTS = PANCAKE_INGREDIENTS.copy()
+        TEST_INGREDIENTS['canary'] = 404
+
+        with_sugar = add_sugar(TEST_INGREDIENTS)
+
+        # test that result is a new dictionary
+        self.assertNotEqual(id(with_sugar), id(TEST_INGREDIENTS))
 
         for key in with_sugar.keys():
             self.assertTrue(key in ['flour', 'eggs', 'milk', 'butter', 'salt', 'sugar'])
@@ -97,11 +109,20 @@ class TestSolution(unittest.TestCase):
         self.assertEqual(with_sugar['salt'], 0.001)
         self.assertTrue(with_sugar['sugar'])
 
+        # test that the input parameter was used
+        self.assertEqual(with_sugar['canary'], 404)
+
         # test that PANCAKE_INGREDIENTS didn't change
         self.test_pancake_ingredients()
 
     def test_remove_salt(self):
-        no_salt = remove_salt(PANCAKE_INGREDIENTS)
+        TEST_INGREDIENTS = PANCAKE_INGREDIENTS.copy()
+        TEST_INGREDIENTS['canary'] = 404
+
+        no_salt = remove_salt(TEST_INGREDIENTS)
+
+        # test that result is a new dictionary
+        self.assertNotEqual(id(no_salt), id(TEST_INGREDIENTS))
 
         self.assertFalse('salt' in no_salt.keys())
         for key in no_salt.keys():
@@ -111,6 +132,9 @@ class TestSolution(unittest.TestCase):
         self.assertEqual(no_salt['eggs'], 4)
         self.assertEqual(no_salt['milk'], 200)
         self.assertFalse(no_salt['butter'])
+
+        # test that the input parameter was used
+        self.assertEqual(no_salt['canary'], 404)
 
         # test that PANCAKE_INGREDIENTS didn't change
         self.test_pancake_ingredients()
