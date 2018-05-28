@@ -54,8 +54,8 @@ class TestSolution(unittest.TestCase):
         self.assertEqual(PANCAKE_INGREDIENTS['salt'], 0.001)
 
     def test_ingredient_exists(self):
-        self.assertTrue(ingredient_exists('flour', PANCAKE_INGREDIENTS))
-        self.assertEqual(ingredient_exists('FLOUR', PANCAKE_INGREDIENTS), False)
+        self.assertIs(ingredient_exists('flour', PANCAKE_INGREDIENTS), True)
+        self.assertIs(ingredient_exists('FLOUR', PANCAKE_INGREDIENTS), False)
         self.assertTrue(ingredient_exists('salt', PANCAKE_INGREDIENTS))
         self.assertFalse(ingredient_exists('sugar', PANCAKE_INGREDIENTS))
 
