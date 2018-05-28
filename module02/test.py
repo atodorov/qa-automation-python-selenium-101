@@ -150,6 +150,9 @@ class TestSolution(unittest.TestCase):
         self.assertEqual(add_fibonacci(NUMBERS)[-1], 610)
 
     def test_fib_exists(self):
+        # validate input parameter is in use
+        self.assertIs(fib_exists([1, 1], 2), False)
+
         self.assertIs(fib_exists(FIBONACCI_NUMBERS, 0), False)
         self.assertIs(fib_exists(FIBONACCI_NUMBERS, 1), True)
         self.assertTrue(fib_exists(FIBONACCI_NUMBERS, 144))
