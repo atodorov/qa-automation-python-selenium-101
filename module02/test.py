@@ -158,6 +158,10 @@ class TestSolution(unittest.TestCase):
         self.assertTrue(fib_exists(FIBONACCI_NUMBERS, 144))
 
     def test_which_fib(self):
+        # validate input parameter is in use
+        with self.assertRaises(ValueError):
+            which_fib([1, 1], 2)
+
         self.assertEqual(which_fib(FIBONACCI_NUMBERS, 1), 1)
         self.assertEqual(which_fib(FIBONACCI_NUMBERS, 55), 10)
 
@@ -167,4 +171,3 @@ class TestSolution(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
