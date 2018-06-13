@@ -99,9 +99,6 @@ class TestSolution(unittest.TestCase):
         # test that result is a new dictionary
         self.assertNotEqual(id(with_sugar), id(TEST_INGREDIENTS))
 
-        for key in with_sugar.keys():
-            self.assertTrue(key in ['flour', 'eggs', 'milk', 'butter', 'salt', 'sugar'])
-
         self.assertEqual(with_sugar['flour'], 2)
         self.assertEqual(with_sugar['eggs'], 4)
         self.assertEqual(with_sugar['milk'], 200)
@@ -125,8 +122,6 @@ class TestSolution(unittest.TestCase):
         self.assertNotEqual(id(no_salt), id(TEST_INGREDIENTS))
 
         self.assertFalse('salt' in no_salt.keys())
-        for key in no_salt.keys():
-            self.assertTrue(key in ['flour', 'eggs', 'milk', 'butter'])
 
         self.assertEqual(no_salt['flour'], 2)
         self.assertEqual(no_salt['eggs'], 4)
