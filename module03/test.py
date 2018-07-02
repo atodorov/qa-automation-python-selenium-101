@@ -63,6 +63,9 @@ class SolutionTests(unittest.TestCase):
         self.assertEqual(palindrome("baba"), False)
 
     def test_prime_number(self):
+        self.assertEqual(True, prime_number(1))
+        self.assertEqual(True, prime_number(2))
+
         self.assertEqual(False, prime_number(9))
         self.assertTrue(prime_number(7))
         self.assertEqual(False, prime_number(8))
@@ -86,6 +89,7 @@ class SolutionTests(unittest.TestCase):
 
     def test_turn_a_list_of_digits_into_a_number(self):
         self.assertEqual(to_number([1, 2, 3]), 123)
+        self.assertEqual(to_number([3, 2, 1]), 321)
         self.assertEqual(to_number([9, 9, 9, 9, 9]), 99999)
 
 if __name__ == '__main__':
