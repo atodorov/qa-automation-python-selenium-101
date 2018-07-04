@@ -85,6 +85,7 @@ are quite handy when writing tests. All tasks below require the usage of both.
 ### Prime Number
 
 * Check if a given number is prime in `prime_number(number)` and return boolean result.
+* For the purposes of this task consider 1 to be a prime number as well.
 * Hint:
 
         >>> 5 % 2
