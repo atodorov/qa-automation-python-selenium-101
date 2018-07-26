@@ -82,9 +82,9 @@ class Human:
 
 gosho = Human('Gosho', 20, 70)
 
-print(isinstance(gosho, Human)) # True
-print(isintance(gosho, object)) # True
-print(isinstance(gosho, Panda)) # False
+print(isinstance(gosho, Human))  # True
+print(isinstance(gosho, object)) # True
+print(isinstance(gosho, Panda))  # False
 ```
 
 

@@ -60,6 +60,7 @@ class SolutionTests(unittest.TestCase):
     def test_palindrome(self):
         self.assertTrue(palindrome(121))
         self.assertTrue(palindrome("kapak"))
+        self.assertEqual(palindrome("abba"), True)
         self.assertEqual(palindrome("baba"), False)
 
     def test_prime_number(self):
