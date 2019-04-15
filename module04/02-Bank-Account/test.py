@@ -22,7 +22,7 @@ class TestBankAccount(unittest.TestCase):
     def test_good_example_of_using_with_block(self):
         account = BankAccount("Test", 100, "BGN")
         # .... 100 more lines of code
-        raise ValueError('Can you find me!')
+        #raise ValueError('Can you find me!')
         # and few more
         with self.assertRaises(ValueError):
             account.deposit(-10)
