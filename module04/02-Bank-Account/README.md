@@ -46,10 +46,6 @@ False
 
 ## Extra usage
 
-**NOTE:** for this portion of the task there are no tests to validate the
-correct operation!!! In the next module we will learn about unit tests and
-revisit this!
-
 Also, we should be able to transfer money from one account to another:
 
 * `transfer_to(account, amount)` - transfers `amount` to `account` if they both have the same currencies! Returns `True` if successful.
