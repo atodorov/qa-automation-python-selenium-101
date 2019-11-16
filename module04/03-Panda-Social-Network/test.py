@@ -1,4 +1,5 @@
 import unittest
+
 from solution import Panda, PandaSocialNetwork
 
 
@@ -12,8 +13,8 @@ class TestPanda(unittest.TestCase):
         self.assertEqual(self.panda.gender(), "male")
 
     def test_is_male_and_is_female(self):
-        self.assertFalse(self.panda.isFemale())
-        self.assertTrue(self.panda.isMale())
+        self.assertFalse(self.panda.is_female())
+        self.assertTrue(self.panda.is_male())
 
     def test_pandas_are_equal(self):
         ivo = Panda("Ivo", "ivo@pandamail.com", "male")
@@ -128,6 +129,7 @@ class TestSocialNetwork(unittest.TestCase):
                                     2, self.ivo, "female"), 2)
         self.assertEqual(self.network.how_many_gender_in_network(
                                     25, self.ivo, "male"), 3)
+
 
 if __name__ == '__main__':
     unittest.main()

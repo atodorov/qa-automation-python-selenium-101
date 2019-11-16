@@ -12,8 +12,8 @@ ivo = Panda("Ivo", "ivo@pandamail.com", "male")
 ivo.name() == "Ivo" # True
 ivo.email() == "ivo@pandamail.com"  # True
 ivo.gender() == "male" # True
-ivo.isMale() == True # True
-ivo.isFemale() == False # True
+ivo.is_male() == True # True
+ivo.is_female() == False # True
 ```
 
 The `Panda` class also should be possible to:
