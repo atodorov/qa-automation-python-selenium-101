@@ -8,6 +8,7 @@ Our `BankAccount` will have the following methods:
 
 * Constructor takes a `name` for the account, initial `balance` and a `currency`.
   If `balance` is negative number, raise a `ValueError` error.
+  If `currency` is not passed, raise a `ValueError` error.
 * `deposit(amount)` - deposits money of `amount` to your balance.
   If `amount` is negative number, raise a `ValueError` error.
 * `balance()` - returns the current balance
